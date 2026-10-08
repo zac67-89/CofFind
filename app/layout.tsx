@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "CofFind — Yangon Café Discovery",
-  description: "A darkroom editorial index of Yangon specialty coffee roasters and heritage tea houses. Powered by OpenStreetMap & Google Maps.",
+  title: "CofFind — Yangon Cafe & Teahouse Guide",
+  description: "A cozy, curated directory of Yangon specialty coffee roasters, quiet workspaces, and historic teahouses.",
 };
 
 export default function RootLayout({
@@ -12,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <head>
         <link
           rel="stylesheet"
@@ -21,7 +21,7 @@ export default function RootLayout({
           crossOrigin=""
         />
       </head>
-      <body className="bg-walnut-shadow text-warm-cream min-h-screen selection:bg-bark-brown selection:text-warm-cream">
+      <body className="bg-cafe-cream text-cafe-espresso min-h-screen selection:bg-cafe-warm-bg selection:text-cafe-caramel">
         {children}
       </body>
     </html>
