@@ -16,7 +16,7 @@ const config: Config = {
         "cafe-border-hover": "#D8C7B5",
         "cafe-espresso": "#2D2118",
         "cafe-hazelnut": "#6E5C50",
-        "cafe-muted": "#9E8C7E",
+        "cafe-muted": "#6E5C50",
         "cafe-caramel": "#8C532B",
         "cafe-caramel-hover": "#744320",
         "cafe-terracotta": "#C8753B",

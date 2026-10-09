@@ -1,5 +1,19 @@
 import type { Metadata } from "next";
+import { Noto_Sans, Noto_Sans_Myanmar } from "next/font/google";
 import "./globals.css";
+
+const notoSans = Noto_Sans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+});
+
+const notoMyanmar = Noto_Sans_Myanmar({
+  subsets: ["myanmar"],
+  weight: ["400", "500", "700"],
+  variable: "--font-myanmar",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "CofFind — Yangon Cafe & Teahouse Guide",
@@ -12,15 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <link
-          rel="stylesheet"
-          href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-          crossOrigin=""
-        />
-      </head>
+    <html lang="en" className={`${notoSans.variable} ${notoMyanmar.variable}`}>
       <body className="bg-cafe-cream text-cafe-espresso min-h-screen selection:bg-cafe-warm-bg selection:text-cafe-caramel">
         {children}
       </body>
